@@ -9,7 +9,7 @@ This is the pytorch implementation of our paper
 - Numpy 1.21.2
 
 ## Training
-Run the PDRO on Micro-video dataset:
+Run the DDRM on ML-1M dataset:
 ```bash
 python train.py
 ```
