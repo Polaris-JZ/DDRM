@@ -10,7 +10,7 @@ import re
 dataset = 'ml-1m'
 log_path = './log/'
 ckpt_path = './code/checkpoints/'
-data_path = './data/ml-1m'
+data_path = '../data/ml-1m'
 epoch_num = 1000
 # noise_schedule = 'linear'
 
@@ -122,47 +122,37 @@ def check_program_done(pid_list):
 
 
 # DNN
-# dims_list = ['[200,600]', '[300,600]', '[300,1000]', '[200,1000]']
-# '[200]', '[300]', '[600]', '[1000]'
 dims_list = ['[200,1100]']
 act_list = ['relu']
-# act_list = ['relu', 'sigmoid', 'tanh']
 
 # diff
-# steps_list = [10,30,50,70,90]
+# steps_list = [10,20,30,40,50,60]
 steps_list = [50]
 
 # sample_steps_list = [1, 1.5, 1.25]
 sample_steps_list = [1.25]
 
-# min_list = [1e-4, 1e-3, 1e-2]
+# min_list = [1e-4, 1e-3]
 min_list = [1e-4]
 
-# max_list = [1e-3, 1e-2, 1e-1]
+# max_list = [1e-3, 1e-2]
 max_list = [1e-3]
 
-# scale_list = [1e-5, 1e-4, 1e-3, 1e-2, 1e-1]
+# scale_list = [1e-5, 1e-4, 1e-3]
 scale_list = [1e-2]
 
 lr_list = [1e-5]
-# diff_lr_list = [1e-3, 1e-4, 1e-5]
-# lr_list = [1e-5]
 diff_lr_list = [1e-3]
 
 gpu_list = ['0']
 
-# GCN
-# layer_list = [2,3,4]
 layer_list = [2]
 
 # alpha
-# alpha_list = [0.1, 0.2, 0.3, 0.4]
+# alpha_list = [0.1,0.2,0.3,0.4,0.5]
 alpha_list = [0.1]
 
 # denoising
-# drop_rate_list = [0.05, 0.1, 0.2, 0.3, 0.4]
-# num_gradual_list = [1000,5000,10000,20000]
-# beta_list = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ,1.0]
 beta_list = [0]
 
 wd = 0

@@ -60,8 +60,8 @@ weight_file, user_weight_file, item_weight_file = utils.getFileName()
 print(f"load and save to {weight_file}")
 if world.LOAD:
     try:
-        Recmodel.load_state_dict(torch.load('/storage/jjzhao/jujia_ws/graph_diff/ml_noise/SGL_RDE/checkpoints/ml-1m_noisy/sgl/nLayer1_LR0.001_msgdropout0.1_emb64_bs2048_WD1e-05_ssl_temp0.1_ssl_lambda0.1_beta0',map_location=torch.device('cpu')))
-        print(f"loaded model weights from /storage/jjzhao/jujia_ws/graph_diff/ml_noise/SGL_RDE/checkpoints/ml-1m_noisy/sgl/nLayer1_LR0.001_msgdropout0.1_emb64_bs2048_WD1e-05_ssl_temp0.1_ssl_lambda0.1_beta0")
+        Recmodel.load_state_dict(torch.load('./pretrain_checkpoint/SGL_checkpoint',map_location=torch.device('cpu')))
+        print(f"loaded model weights from ./pretrain_checkpoint/SGL_checkpoint")
     except FileNotFoundError:
         print(f"{weight_file} not exists, start from beginning")
 Neg_k = 1

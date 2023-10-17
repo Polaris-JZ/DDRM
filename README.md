@@ -9,7 +9,20 @@ This is the pytorch implementation of our paper
 - Numpy 1.21.2
 
 ## Training
-Run the DDRM on ML-1M dataset:
+Run the MF-based DDRM on ML-1M dataset:
 ```bash
+cd DDRM_MF
+python train.py
+```
+
+Run the LightGCN-based DDRM on ML-1M dataset:
+```bash
+cd LightGCN_MF
+python train.py
+```
+
+Run the SGL-based DDRM on ML-1M dataset:
+```bash
+cd SGL_MF
 python train.py
 ```
