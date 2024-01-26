@@ -1,5 +1,4 @@
 # Denoising Diffusion Recommender Model
-- last update : 2023-10-17 (update README.md)
 This is the pytorch implementation of our paper
 > Denoising Diffusion Recommender Model
 
