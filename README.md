@@ -18,12 +18,12 @@ python train.py
 
 Run the LightGCN-based DDRM on ML-1M dataset:
 ```bash
-cd LightGCN_MF
+cd DDRM_LightGCN
 python train.py
 ```
 
 Run the SGL-based DDRM on ML-1M dataset:
 ```bash
-cd SGL_MF
+cd DDRM_SGL
 python train.py
 ```
