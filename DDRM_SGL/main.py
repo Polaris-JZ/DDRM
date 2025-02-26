@@ -60,7 +60,7 @@ weight_file, user_weight_file, item_weight_file = utils.getFileName()
 print(f"load and save to {weight_file}")
 if world.LOAD:
     try:
-        Recmodel.load_state_dict(torch.load('./pretrain_checkpoint/SGL_checkpoint',map_location=torch.device('cpu')))
+        Recmodel.load_state_dict(torch.load(f'./pretrain_checkpoint/{args.dataset}_SGL_checkpoint',map_location=torch.device('cpu')))
         print(f"loaded model weights from ./pretrain_checkpoint/SGL_checkpoint")
     except FileNotFoundError:
         print(f"{weight_file} not exists, start from beginning")
