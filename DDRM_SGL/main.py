@@ -58,12 +58,9 @@ bpr = utils.BPRLoss(Recmodel, user_reverse_model, item_reverse_model, diffusion,
 
 weight_file, user_weight_file, item_weight_file = utils.getFileName()
 print(f"load and save to {weight_file}")
-if world.LOAD:
-    try:
-        Recmodel.load_state_dict(torch.load(f'./pretrain_checkpoint/{args.dataset}_SGL_checkpoint',map_location=torch.device('cpu')))
-        print(f"loaded model weights from ./pretrain_checkpoint/SGL_checkpoint")
-    except FileNotFoundError:
-        print(f"{weight_file} not exists, start from beginning")
+
+Recmodel.load_state_dict(torch.load(f'./pretrain_checkpoint/{args.dataset}_SGL_checkpoint',map_location=torch.device('cpu')))
+print(f"loaded model weights from ./pretrain_checkpoint/SGL_checkpoint")
 Neg_k = 1
 
 # get config
