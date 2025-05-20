@@ -59,7 +59,7 @@ bpr = utils.BPRLoss(Recmodel, user_reverse_model, item_reverse_model, diffusion,
 weight_file, user_weight_file, item_weight_file = utils.getFileName()
 print(f"load and save to {weight_file}")
 
-path = './pretrain_checkpoint/' + args.dataset + '_MF_checkpoint.tar'
+path = './pretrain_checkpoint/' + args.dataset + '_MF_checkpoint'
 Recmodel.load_state_dict(torch.load(path ,map_location=torch.device('cpu')))
 print(f"loaded model weights from {path}")
 Neg_k = 1
